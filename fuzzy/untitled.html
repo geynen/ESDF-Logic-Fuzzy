@@ -1,0 +1,60 @@
+<html>
+<head>
+    <script type="text/javascript" src="../lib/dracula/strathausen-dracula-a6a5fa7/js/raphael-min.js"></script>
+    <script type="text/javascript" src="../lib/dracula/strathausen-dracula-a6a5fa7/js/dracula_graffle.js"></script>
+    <script type="text/javascript" src="../lib/dracula/strathausen-dracula-a6a5fa7/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="../lib/dracula/strathausen-dracula-a6a5fa7/js/dracula_graph.js"></script>
+    <!--<script type="text/javascript" src="example.js"></script>-->
+<script>
+
+var redraw, g, renderer;
+
+/* only do all this when document has finished loading (needed for RaphaelJS) */
+window.onload = function() {
+    
+    var width = $(document).width() - 20;
+    var height = $(document).height() - 60;
+    
+    g = new Graph();
+
+    
+    /* connect nodes with edges */
+    g.addEdge("strawberry", "cherry");
+    g.addEdge("cherry", "apple");
+    g.addEdge("cherry", "apple")
+    g.addEdge("1", "id35");
+    g.addEdge("penguin", "id35");
+    g.addEdge("penguin", "apple");
+    g.addEdge("kiwi", "id35");
+	g.addEdge("penguin", "strawberry");
+
+
+    /* layout the graph using the Spring layout implementation */
+    var layouter = new Graph.Layout.Spring(g);
+    
+    /* draw the graph using the RaphaelJS draw implementation */
+    renderer = new Graph.Renderer.Raphael('canvas', g, width, height);
+    
+    redraw = function() {
+        layouter.layout();
+        renderer.draw();
+    };
+    hide = function(id) {
+        g.nodes[id].hide();
+    };
+    show = function(id) {
+        g.nodes[id].show();
+    };
+    //    console.log(g.nodes["kiwi"]);
+};
+
+
+</script>
+</head>
+<body>
+<div id="canvas"></div>
+<button id="redraw" onClick="redraw();">redraw</button>
+<button id="hide_penguin" onClick="hide('penguin');">hide penguin (beta)</button>
+<button id="hide_penguin" onClick="show('penguin');">show penguin (beta)</button>
+</body>
+</html>

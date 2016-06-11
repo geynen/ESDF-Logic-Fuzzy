@@ -1,0 +1,348 @@
+/* begin Page */
+
+/* Created by Artisteer v3.1.0.45994 */
+
+#art-main {
+   zoom:expression(runtimeStyle.zoom=1,calcWidth=function(o){var p='90%';var min=700;var max=1728;var b=document.body;if(o.w!=b.clientWidth){o.w=b.clientWidth;var w=b.clientWidth/100*parseInt(p);return w < min ? min+'px': w > max ? max+'px':p;}});
+   width:auto;
+}
+body {
+   background-attachment: scroll;
+}
+#art-page-background-middle-texture {
+   height: expression(b.clientHeight + 'px');
+   width: expression(document.body.clientWidth>700?"100%":"700px");
+}
+.cleared {
+   width:1px;
+}
+/* Start Box */
+.art-box, .art-box-body {
+   zoom:1;
+}
+/* End Box */
+/* Start Bar */
+.art-bar{
+   zoom:1;
+}
+/* End Bar */
+/* end Page */
+
+/* begin Header */
+.art-header {
+   zoom:expression(runtimeStyle.zoom=1,insertBefore(document.createElement('div'),firstChild).className='art-header-jpeg');
+}
+
+.art-header-jpeg
+{
+   position: absolute;
+   z-index:-1;
+   top: 0;
+   width:100%;
+   height: 150px;
+   background-image: url('images/header.jpg');
+   background-repeat: no-repeat;
+   background-position: center left;
+}
+div.art-header{
+   width:expression(calcWidth(this));
+}  
+/* end Header */
+
+/* begin HeaderObject */
+div.art-headerobject{
+   font-size: 1px;
+}
+/* end HeaderObject */
+
+/* begin Box, Sheet */
+.art-sheet {
+   background:#DFEEF1;
+   width:expression(calcWidth(this));
+}
+
+/* end Box, Sheet */
+
+/* begin Menu */
+ul.art-hmenu, ul.art-hmenu ul, ul.art-hmenu li, ul.art-hmenu a {
+   zoom:1;
+}
+.art-hmenu li.art-hmenuhover{
+   z-index: 10000;
+}
+.art-hmenu .art-hmenuhoverUL{
+   visibility: visible;
+   top: 100%;
+   left: 0;
+}
+.art-hmenu .art-hmenuhoverUL .art-hmenuhoverUL{
+   top: 0;
+   left: 100%;
+}
+.art-hmenu ul li {
+   float: left !important;
+   clear: both;
+   width: 100%;
+}
+.art-nav
+{
+   zoom: 1;
+   height: 35px;
+   background:#006C85;
+}
+
+/* end Menu */
+
+/* begin MenuItem */
+.art-hmenu a 
+{
+   display:inline-block;
+   color: #112327;
+   background-color:#74B4C3;
+   padding: 0 22px;
+   line-height: 27px;
+   text-align: center;
+}
+
+.art-hmenu a.active 
+{
+   color: {ActiveTextColor};
+}
+
+.art-hmenu a:hover, .art-hmenuhoverA,  .art-hmenuhover a 
+{
+   color: #FDD3C4;
+   background-color:#C43A08;
+}
+
+/* end MenuItem */
+
+/* begin MenuSeparator */
+ul.art-hmenu li {
+   margin-left:expression(this.previousSibling==null?'0':'9px');
+}
+ul.art-hmenu li li{
+   margin-left:0;
+}
+
+span.art-hmenu-separator
+{
+   position:absolute;
+   display: block;
+   top:0;
+   left:  -9px;
+   width: 9px;
+   height: 27px;
+   background: url('images/menuseparator.png') center center no-repeat;
+}
+/* end MenuSeparator */
+
+/* begin MenuSubItem */
+.art-hmenu ul a 
+{
+   color: #361002 !important;
+   float: left;
+}
+
+.art-hmenu ul a:hover, .art-hmenu ul .art-hmenuhover .art-hmenuhoverA 
+{
+   color: #000000 !important;
+   background-position: left bottom;
+   border-color: #C43A08;
+   border-top-width: 1px !important;
+}
+
+/* end MenuSubItem */
+
+/* begin Layout */
+.art-content-layout, .art-content-layout-row, .art-layout-cell 
+{
+   display: block;
+   zoom: 1;
+}
+.art-layout-cell
+{
+   position:relative;
+   float: left;
+   clear: right;
+}
+/* end Layout */
+
+/* begin Box, Block, VMenuBlock */
+.art-vmenublock {
+   background:#DFEEF1;
+}
+/* end Box, Block, VMenuBlock */
+
+/* begin BlockHeader, VMenuBlockHeader */
+.art-vmenublockheader {
+   background:#51A1B4;
+}
+/* end BlockHeader, VMenuBlockHeader */
+
+/* begin Box, Box, VMenuBlockContent */
+.art-vmenublockcontent {
+   background:#EAF4F6;
+}
+
+/* end Box, Box, VMenuBlockContent */
+
+/* begin VMenuItem */
+ul.art-vmenu, ul.art-vmenu ul, ul.art-vmenu li, ul.art-vmenu a
+{
+   position:relative;
+   zoom: 1;
+}
+
+ul.art-vmenu li {
+   z-index:0;
+   margin-top:expression(this.previousSibling==null?'0':'2px');
+}
+ul.art-vmenu ul{
+   margin-top:2px;
+   padding-bottom: 0;
+}
+
+ul.art-vmenu a 
+{
+   color: #091315;
+   background-color:#74B4C3;
+   padding: 0 10px 0 10px;
+   height: 32px;
+   line-height: 32px;
+}
+
+.art-vmenu a.active 
+{
+   color: #C2F4FF;
+   background-color:#74B4C3;
+}
+
+ul.art-vmenu a:hover
+{
+   color: #98C8D2;
+   background-color:#30636E;
+}
+
+/* end VMenuItem */
+
+/* begin VMenuSubItem */
+ul.art-vmenu ul a {
+   color: #2D5C67 !important;
+}
+ul.art-vmenu li li {
+   padding-top:expression(this.previousSibling==null?'0':'0');
+   margin-top:expression(this.previousSibling==null?'0':'2px');
+}
+ 
+ul.art-vmenu ul ul {
+   margin-top:2px;
+}
+ul.art-vmenu ul a.active {
+   color: #00C8F5 !important;
+}
+ul.art-vmenu ul a:hover {
+   color: #1F4047 !important;
+}	
+/* end VMenuSubItem */
+
+/* begin Box, Block */
+.art-block {
+   background:#DFEEF1;
+}
+/* end Box, Block */
+
+/* begin BlockHeader */
+.art-blockheader {
+   background:#0089A8;
+}
+/* end BlockHeader */
+
+/* begin Box, BlockContent */
+.art-blockcontent {
+   background:#EAF4F6;
+}
+.art-blockcontent-body ul li{
+   height: 1%;
+}
+
+/* end Box, BlockContent */
+
+/* begin Button */
+.art-button-wrapper{
+   zoom: 1;
+}
+.art-button-wrapper .art-button-l, .art-button-wrapper .art-button-r {
+   display: none;
+}
+.art-button-wrapper .art-button {
+   float: left;
+}
+/* end Button */
+
+/* begin Box, Post */
+.art-post {
+   background:#EAF4F6;
+}
+/* end Box, Post */
+
+/* begin PostIcons, PostHeaderIcons */
+.art-postheadericons span{
+   zoom: 1;
+}
+/* end PostIcons, PostHeaderIcons */
+
+/* begin PostBullets */
+.art-post ul li, .art-post ol ul li
+{
+   height: 1%;
+   padding-left: 12px;
+   /* makes "ul li" not to align behind the image if they are in the same line */
+  overflow-x: visible;
+   overflow-y: hidden;
+}
+
+.art-post ul ol li
+{
+   background: none;
+   padding-left: 0;
+   /* overrides overflow for "ul li" and sets the default value */
+  overflow: visible;
+}
+/* end PostBullets */
+
+/* begin PostIcons, PostFooterIcons */
+.art-postfootericons span{
+   zoom: 1;
+}
+/* end PostIcons, PostFooterIcons */
+
+/* begin Footer */
+.art-footer-body{
+   padding-right: 0;
+   zoom:1;
+}
+.art-footer{
+   zoom:1;
+   background:#98C8D2;
+}
+
+.art-footer-text
+{
+   height: 34px;
+}
+
+.art-rss-tag-icon
+{
+   zoom: 1;
+   font-size: 1px;
+}
+
+/* end Footer */
+
+/* begin LayoutCell, content */
+.art-content {
+   width: auto;
+}
+/* end LayoutCell, content */
+
